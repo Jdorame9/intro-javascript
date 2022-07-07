@@ -1,0 +1,61 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.encabezado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main input[type="text"], input[type="number"]{
+    width: 60%;
+}
+
+.tagRadio {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 9%;
+}
+
+.radio{
+    display: flex;
+    flex-direction: row;
+}
+
+#tagEmbarazada {
+    display: none;
+}
+#tagSemEmbarazo {
+    display: none;
+}
+
+.tagRegistrar{
+    flex-direction: column;
+}

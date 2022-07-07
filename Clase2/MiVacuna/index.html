@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Mi vacuna</h1>
+    </header>
+    <main>
+        <div class="tagName">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div class="tagNacimiento">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+        </div>
+        <div class="tagRadio">
+            <label for="sexo">Sexo:</label>
+            <div class="radio">
+                <input type="radio" name="sexo" value="M" onclick="ocultarEmbarazo();">Masculino
+                <input type="radio" name="sexo" value="F" onclick="mostrarEmbarazo();">Femenino
+            </div>
+        </div>
+        <div class="tagRadio" id="tagEmbarazada">
+            <label for="embarazada">¿Estas embarazada?</label>
+            <div class="radio">
+                <input type="radio" name="embarazada" value="embsi" onclick="mostrarSemEmbarazo();" id="embsi">Si
+                <input type="radio" name="embarazada" value="embno" onclick="ocultarSemEmbarazo();" id="embno">No
+            </div>
+        </div>
+        <div class="tagSemEmbarazo" id="tagSemEmbarazo">
+            <label for="semEmbarazo">Semanas de embarazo:</label>
+            <input type="number" name="semEmbarazo" id="semEmbarazo">
+        </div>
+        <div class="tagEstados">
+            <label for="estados">Su municipio es fronterizo?</label>
+            <select name="estados" id="estados" >
+                <option value=no>Seleccione su estado</option>
+                <option value="no">Aguascalientes</option>
+                <option value="si">Baja California</option>
+                <option value="no">Baja California Sur</option>
+                <option value="si">Campeche</option>
+                <option value="si">Chiapas</option>
+                <option value="si">Chihuahua</option>
+                <option value="si">Coahuila</option>
+                <option value="no">Colima</option>
+                <option value="no">CDMX</option>
+                <option value="no">Durango</option>
+                <option value="no">Ciudad Mexico</option>
+            </select>
+        </div>
+        <div class="tagRegistrar">
+            <input type="submit" value="Registrar" onclick="validarVacuna();">
+        </div>
+    </main>
+</body>
+</html>
